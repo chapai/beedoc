@@ -6,7 +6,7 @@ sort: 2
 # Project routing setting
 
 So, we've created a beego project and ran it in previous section. But how does it work? Let's investigate from the starting file (main.go).
-
+``` go
 	package main
 	
 	import (
@@ -17,7 +17,7 @@ So, we've created a beego project and ran it in previous section. But how does i
 	func main() {
 	        beego.Run()
 	}
-	
+```	
 We can see two simple lines. The first one registers the router by calling `beego.Router` and the second one is `beego.Run`. What did these two lines do?
 
 1. Actually beego.Router registered an address. The first argument is the request uri and here is `/` which means the request doesn't have any uri. The second argument is the Controller who will handle the requests for this uri. We can also register a router like this:
